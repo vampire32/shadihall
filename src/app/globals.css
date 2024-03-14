@@ -1,0 +1,666 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --glow-color: hsl(180, 7%, 82%);
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.image_icon {
+  color: rgb(236, 55, 0);
+  opacity: .5;
+}
+
+.image_icon:hover {
+  cursor: pointer;
+  font-size: 24.2px;
+}
+
+.date_picker {
+  width: 100%;
+  height: 100%;
+}
+
+.rs-picker-toggle {
+  height: 100%;
+}
+
+/* BallLights.css */
+
+/* BallLights.css */
+
+.ball-lights-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.light-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffe0;
+  margin: 5px;
+  box-shadow: 0 0 8px rgba(255, 255, 224, 0.8);
+  animation: blink 1s step-start infinite alternate, glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 8px rgba(255, 255, 224, 0.8);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255, 255, 224, 1);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .light-ball {
+    width: 15px; /* Smaller size for smaller screens */
+    height: 15px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 400px) {
+  .light-ball {
+    width: 10px; /* Even smaller size for very small screens */
+    height: 10px;
+    margin: 2px;
+  }
+}
+
+
+
+.div-home {
+  align-items: center;
+  background-color: #f9f9f9;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 35px 240px;
+  position: relative;
+}
+
+.div-home .heading-how-it {
+  color: #132743;
+  font-family: "Inter-Medium", Helvetica;
+  font-size: 35.7px;
+  font-weight: 500;
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 43px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 225.56px;
+}
+
+.div-home .how-it-works-webp {
+
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 576px;
+  position: relative;
+  width: 1440px;
+}
+
+.authlinks {
+  width: 60px;
+  height: 40px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+}
+
+/* .slide-container{
+  border: 3px solid yellow;
+} */
+
+/* .slidingCont{
+  border: 3px solid rgb(218, 22, 229);
+} */
+
+
+@media all and (min-width: 401px) and (max-width: 750px){
+  .each-slide{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 4%;
+  }
+  .Home_Featured_Brands_Item1 div:last-child{
+      position: relative;
+      font-size: 80%;
+  }
+
+  .Home_carousel_item_Third1{
+      margin-bottom: 10%;
+  }
+}
+
+
+@media all and (min-width: 280px) and (max-width: 400px){
+  .each-slide{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 4%;
+      padding-bottom: 5%;
+      margin-bottom: 8%;
+  }
+  .Home_Featured_Brands_Item1 div:last-child{
+      font-size: 50%;
+  }
+}
+/* upper Weddingjs Details */
+
+
+.div-profile {
+  background-color: #ffffff;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d0d0d0;
+  height: 52px;
+  position: relative;
+  width: 676px;
+}
+
+.div-profile .button {
+  all: unset;
+  box-sizing: border-box;
+  height: 51px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 169px;
+}
+
+.div-profile {
+  display: flex;
+}
+
+.div-profile .text-wrapper,
+.div-profile .div,
+.div-profile .text-wrapper-2,
+.div-profile .text-wrapper-3 {
+  color: #2336a1;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  /* Change to relative to position relative to the container */
+  text-align: center;
+  width: 115px;
+  /* Adjust the width accordingly */
+  transition: color 0.3s;
+  /* Add transition for a smooth effect */
+}
+
+.div-profile .text-wrapper:hover,
+.div-profile .div:hover,
+.div-profile .text-wrapper-2:hover,
+.div-profile .text-wrapper-3:hover {
+  color: #ff0000;
+  /* Change to your desired hover color */
+}
+
+.div-profile .div-wrapper,
+.div-profile .button-2,
+.div-profile .button-3 {
+  all: unset;
+  box-sizing: border-box;
+  height: 51px;
+  position: relative;
+  /* Change to relative to position relative to the container */
+  transition: background-color 0.3s;
+  /* Add transition for a smooth effect */
+}
+
+.div-profile .div-wrapper:hover,
+.div-profile .button-2:hover,
+.div-profile .button-3:hover {
+  background-color: #e0e0e0;
+  /* Change to your desired hover background color */
+}
+
+.div-profile .button-3 {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: #2336a1;
+}
+
+.div-profile .button-3:hover {
+  border-color: #ff0000;
+  /* Change to your desired hover border color */
+}
+
+/* end upper Weddingjs Details */
+
+/*  Weddingjs Details */
+
+.div {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d0d0d0;
+  height: 636px;
+  position: relative;
+  width: 845px;
+}
+
+.div .heading-details {
+  color: #0d0d0d;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 23.4px;
+  font-weight: 400;
+  height: 23px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 21px;
+  white-space: nowrap;
+  width: 77px;
+}
+
+.div .venue-type-svg {
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 68px;
+  width: 20px;
+}
+
+.div .heading-venue-type {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 68px;
+  width: 100px;
+}
+.div .text-wrapper {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 102px;
+  width: 202px;
+}
+
+.div .amenities-svg {
+  height: 18px;
+  left: 452px;
+  position: absolute;
+  top: 68px;
+  width: 18px;
+}
+
+.div .heading-amenities {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 480px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 68px;
+  width: 90px;
+}
+
+.div .text-wrapper-2 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 480px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 102px;
+  width: 293px;
+}
+
+.div .text-wrapper-3 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 480px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 135px;
+  width: 298px;
+}
+
+.div .text-wrapper-4 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 480px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 168px;
+  width: 81px;
+}
+
+.div .parking-space-svg {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 221px;
+  width: 22px;
+}
+
+.div .heading-parking {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 221px;
+  width: 136px;
+}
+
+.div .text-wrapper-5 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 255px;
+  width: 42px;
+}
+
+.div .catering-svg {
+  height: 18px;
+  left: 452px;
+  position: absolute;
+  top: 221px;
+  width: 15px;
+}
+
+.div .heading-catering {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 477px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 221px;
+  width: 87px;
+}
+
+.div .text-wrapper-6 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 477px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 255px;
+  width: 84px;
+}
+
+.div .wheelchair {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 308px;
+  width: 18px;
+}
+
+.div .heading-wheelchair {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 308px;
+  width: 217px;
+}
+
+.div .text-wrapper-7 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 342px;
+  width: 38px;
+}
+
+.div .staff-svg {
+  height: 18px;
+  left: 452px;
+  position: absolute;
+  top: 308px;
+  width: 20px;
+}
+
+.div .heading-staff {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 483px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 308px;
+  width: 52px;
+}
+
+.div .text-wrapper-8 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 483px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 342px;
+  width: 145px;
+}
+
+.div .description-svg {
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 395px;
+  width: 14px;
+}
+
+.div .heading {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 395px;
+  width: 113px;
+}
+
+.div .p {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 429px;
+  width: 783px;
+}
+
+.div .text-wrapper-9 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 462px;
+  width: 808px;
+}
+
+.div .text-wrapper-10 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 495px;
+  width: 666px;
+}
+
+.div .additional-info-svg {
+  height: 21px;
+  left: 0;
+  position: absolute;
+  top: 548px;
+  width: 19px;
+}
+
+.div .heading-additional {
+  color: #0d0d0d;
+  font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  height: 24px;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 548px;
+  width: 229px;
+}
+
+.div .text-wrapper-11 {
+  color: #0d0d0d;
+  font-family: "Poppins-Regular", Helvetica;
+  font-size: 22px;
+  font-weight: 400;
+  height: 31px;
+  left: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 582px;
+  width: 553px;
+}
+
+/*  Weddingjs Details */
+
+.cascading-right {
+  margin-right: -50px;
+}
+
+@media (max-width: 900px) {
+  .cascading-right {
+    margin-right: 0;
+  }
+}
+.wedding-hall-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}
+
+.hall-details {
+  flex: 1;
+}
+
+.hall-image {
+  flex: 1;
+  margin-left: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
